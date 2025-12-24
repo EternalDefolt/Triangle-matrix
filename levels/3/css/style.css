@@ -1,0 +1,78 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+canvas {
+    display: block;
+}
+
+/* Boss HP Bar at top */
+#boss-hp-container {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    text-align: center;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    pointer-events: none;
+}
+
+.boss-hp-label {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.boss-bar-container {
+    height: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.boss-bar-fill {
+    height: 100%;
+    background: #ffffff;
+    transition: width 0.2s ease-out;
+}
+
+.boss-bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* Victory title */
+.victory-title {
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+    margin-bottom: 50px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Victory Overlay */
+#victory-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}

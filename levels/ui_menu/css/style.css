@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 50px;
+    color: #000;
+    /* White outline effect */
+    text-shadow:
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.level-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.level-box {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.level-box:hover {
+    background-color: #FFF;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.level-box.locked {
+    border-color: #333;
+    color: #333;
+    cursor: default;
+}
+
+.level-box.locked:hover {
+    background-color: black;
+    color: #333;
+    transform: none;
+    box-shadow: none;
+}
+
+.back-btn {
+    padding: 15px 40px;
+    border: 3px solid #FFF;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.back-btn:hover {
+    background-color: #FFF;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#game-canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+#hint-text {
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 5px #000;
+}
