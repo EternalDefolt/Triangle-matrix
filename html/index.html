@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle Matrix</title>
+    <link rel="stylesheet" href="../css/style.css?v=2">
+    <style>
+        #start-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #start-btn {
+            font-family: 'Arial Black', 'Impact', sans-serif;
+            font-size: 48px;
+            padding: 30px 80px;
+            border: 4px solid #fff;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        #start-btn:hover {
+            background: #fff;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Screen -->
+    <div id="start-screen">
+        <button id="start-btn" onclick="startGame()">ИГРАТЬ</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <h1>Triangle matrix</h1>
+        <div class="menu-buttons">
+            <button
+                onclick="Sound.buttonClick(); setTimeout(() => location.href='../../tutorial/html/index.html', 100)">Обучение</button>
+            <button
+                onclick="Sound.buttonClick(); setTimeout(() => location.href='../levels/ui_menu/html/index.html', 100)">Играть</button>
+            <button onclick="Sound.buttonClick(); setTimeout(() => window.close(), 100)">Выход</button>
+        </div>
+    </div>
+    <canvas id="bg-canvas"></canvas>
+    <script src="../js/sound.js?v=2"></script>
+    <script src="../js/background.js"></script>
+    <script>
+        function startGame() {
+            Sound.resume();
+            Sound.buttonClick();
+            document.getElementById('start-screen').style.display = 'none';
+            document.getElementById('game-container').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

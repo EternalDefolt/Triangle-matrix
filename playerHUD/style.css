@@ -1,0 +1,161 @@
+#ui-layer {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    pointer-events: none;
+    text-shadow: 1px 1px 0 #000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 50%;
+}
+
+#status-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+    width: 100%;
+    text-align: center;
+}
+
+.hud-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hud-label {
+    width: 50px;
+    text-align: right;
+}
+
+.bar-container {
+    flex: 1;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    transition: width 0.2s ease-out;
+}
+
+.bar-fill.hp {
+    background: #ffffff;
+}
+
+.bar-fill.shield {
+    background: #ffffff;
+}
+
+.bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #000;
+    text-shadow: none;
+}
+
+/* Death Screen Overlay */
+#death-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.death-content {
+    text-align: center;
+}
+
+.death-title {
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+    margin-bottom: 50px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+.death-buttons {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.death-btn {
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 24px;
+    width: 200px;
+    padding: 20px 0;
+    border: 3px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.death-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* Victory Screen Overlay */
+#victory-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.victory-title {
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    font-size: 64px;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+    margin-bottom: 50px;
+    animation: pulse 1.5s ease-in-out infinite;
+}

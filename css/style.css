@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    /* Use Arial Black/Impact for buttons/body text as requested "other different" */
+    font-family: 'Arial Black', 'Impact', sans-serif;
+}
+
+#game-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+h1 {
+    /* Original Beautiful White Style */
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4em;
+    margin-bottom: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    animation: float 3s ease-in-out infinite;
+    /* Soft Glow */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.menu-buttons button,
+.menu-buttons a {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* Keep Bold font for buttons */
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.menu-buttons button:hover,
+.menu-buttons a:hover {
+    background: #fff;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#bg-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
