@@ -1,0 +1,18 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+canvas {
+    display: block;
+}
+
+/* Wave indicator tweaks */
+#wave-indicator {
+    font-size: 18px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+/* Reuse HUD styles from playerHUD; level-specific tweaks can go here */

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Уровень 3 - Босс</title>
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="../../../css/style.css?v=2">
+    <!-- HUD CSS -->
+    <link rel="stylesheet" href="../../../playerHUD/style.css?v=9">
+    <!-- Level Specific CSS -->
+    <link rel="stylesheet" href="../css/style.css?v=3">
+</head>
+
+<body>
+
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Boss HP Bar -->
+    <div id="boss-hp-container">
+        <div class="boss-hp-label">БОСС</div>
+        <div class="boss-bar-container">
+            <div class="boss-bar-fill" id="boss-hp-bar" style="width: 100%;"></div>
+        </div>
+    </div>
+
+    <!-- Player HUD -->
+    <div id="ui-layer">
+        <div class="hud-row">
+            <span class="hud-label">HP</span>
+            <div class="bar-container">
+                <div class="bar-fill hp" id="hp-bar" style="width: 100%;"></div>
+                <span class="bar-text" id="hp-val">50/50</span>
+            </div>
+        </div>
+        <div class="hud-row">
+            <span class="hud-label">ЩИТ</span>
+            <div class="bar-container">
+                <div class="bar-fill shield" id="shield-bar" style="width: 100%;"></div>
+                <span class="bar-text" id="shield-val">5/5</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="status-text"></div>
+
+    <!-- Death Screen Overlay -->
+    <div id="death-overlay" style="display: none;">
+        <div class="death-content">
+            <h1 class="death-title">ВЫ ПОГИБЛИ</h1>
+            <div class="death-buttons">
+                <button class="death-btn restart-btn" onclick="location.reload()">РЕСТАРТ</button>
+                <button class="death-btn exit-btn"
+                    onclick="location.href='../../ui_menu/html/index.html'">ВЫХОД</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Victory Overlay -->
+    <div id="victory-overlay" style="display: none;">
+        <div class="death-content">
+            <h1 class="victory-title">ПОБЕДА!</h1>
+            <div class="death-buttons">
+                <button class="death-btn exit-btn" onclick="location.href='../../ui_menu/html/index.html'">В
+                    МЕНЮ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logic Scripts -->
+    <script src="../../../js/sound.js?v=1"></script>
+    <script src="../../../character/Player.js?v=8"></script>
+    <script src="../../../enemies/CircleEnemy.js?v=2"></script>
+    <script src="../../../enemies/BossEnemy.js?v=1"></script>
+    <script src="../../../playerHUD/hud.js?v=2"></script>
+    <script src="../js/main.js?v=4"></script>
+
+</body>
+
+</html>

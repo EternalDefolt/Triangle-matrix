@@ -1,0 +1,44 @@
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+canvas {
+    display: block;
+}
+
+/* Progress Bar at top */
+#progress-container {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    text-align: center;
+    font-family: 'Arial Black', 'Impact', sans-serif;
+    pointer-events: none;
+}
+
+.progress-label {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.progress-bar-container {
+    height: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    transition: width 0.1s linear;
+}
